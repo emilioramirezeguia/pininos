@@ -1,6 +1,4 @@
-/*
- * Globals
- */
+/* Globals */
 
 /* Links */
 a,
@@ -19,9 +17,7 @@ a:hover {
 }
 
 
-/*
- * Base structure
- */
+/* Base structure */
 
 html,
 body {
@@ -41,15 +37,22 @@ body {
 }
 
 
-/*
- * Header
- */
+/* Header */
 .masthead {
   margin-bottom: 2rem;
 }
 
 .masthead-brand {
   margin-bottom: 0;
+}
+
+main {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+.icon {
+  margin-bottom: 1rem;
 }
 
 @media (min-width: 48em) {
@@ -59,21 +62,23 @@ body {
 }
 
 
-/*
- * Cover
- */
-.cover {
-  padding: 0 1.5rem;
+/* Cover */
+.cover-heading {
+  padding: .75rem 0;
 }
+
 .cover .btn-lg {
   padding: .75rem 1.25rem;
   font-weight: 700;
 }
 
+/* Footer */
+#features {
+  margin-top: 1.5rem;
+  padding: 3.5% 0;
+}
 
-/*
- * Footer
- */
+/* Footer */
 .mastfoot {
   color: rgba(255, 255, 255, .5);
 }
