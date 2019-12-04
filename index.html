@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="es-419">
 
 <head>
   <!-- Required meta tags -->
@@ -13,6 +13,8 @@
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   <!-- Font Awesome -->
   <script src="https://kit.fontawesome.com/88f405fd13.js" crossorigin="anonymous"></script>
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
   <!-- Custom CSS -->
   <link rel="stylesheet" href="css/styles.css">
   <!-- Segment -->
@@ -56,47 +58,56 @@
 </head>
 
 <body>
-  <div class="cover-container d-flex w-150 h-150 p-3 mx-auto flex-column">
-    <header class="masthead mb-auto">
-      <div class="inner">
-        <h3 class="masthead-brand"><a href="#">pininos</a></h3>
-      </div>
-    </header>
 
-    <main role="main" class="inner cover">
-      <h1 class="cover-heading">La red social privada para ti y para tu hogar</h1>
-      <p class="lead">Haz de donde vives un espacio seguro con ayuda de tus vecinos.</p>
-      <p class="lead">
-        <a href="learn-more.html" class="btn btn-lg btn-light">Conoce más</a>
-      </p>
-    </main>
+  <!-- Introduction Section -->
+  <section id="introduction">
+    <div class="container-fluid">
+      <!-- Navbar -->
+      <nav class="navbar navbar-dark">
+        <a class="navbar-brand mx-auto" href="#">pininos</a>
+      </nav>
 
-    <section id="features">
+      <!-- Title + Form -->
       <div class="row">
-        <div class="feature-box col-lg-4">
-          <i class="icon fas fa-comments fa-2x"></i>
-          <p>Comunícate fácilmente con tus vecinos y entérate de lo que pasa en tu colonia.</p>
+        <div class="col-md-6">
+          <h1>La red social privada para ti y tu hogar</h1>
         </div>
-
-        <div class="feature-box col-lg-4">
-          <i class="icon fas fa-tools fa-2x"></i>
-          <p>Comparte información útil como recomendaciones de servicios o avisos comunales.</p>
-        </div>
-
-        <div class="feature-box col-lg-4">
-          <i class="icon fas fa-hands-helping fa-2x"></i>
-          <p>Siente la tranquilidad de saber que tienes alguien cerca para lo que se ofrezca en casa.</p>
+        <div class="col-md-6">
+          <form>
+            <p>Introduce tu información y te avisaremos en cuanto esté listo el producto.</p>
+            <div class="form-group">
+              <label for="name">Nombre</label>
+              <input type="text" class="form-control" id="name">
+            </div>
+            <div class="form-group">
+              <label for="email">Correo electrónico</label>
+              <input type="email" class="form-control" id="email">
+            </div>
+            <div class="form-group">
+              <label for="city">Ciudad</label>
+              <input type="text" class="form-control" id="city">
+            </div>
+            <button type="submit" class="btn btn-primary btn-lg btn-block">Conoce más</button>
+          </form>
         </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <footer class="mastfoot mt-auto">
-      <div class="inner">
-        <p>© 2019 pininos. Todos los derechos reservados.</p>
+  <!-- Features Section -->
+  <section id="features">
+    <div class="row">
+      <div class="col-md-4">
+        <p>Comunícate fácilmente con tus vecinos y entérate de lo que pasa en tu colonia.</p>
       </div>
-    </footer>
-  </div>
-
+      <div class="col-md-4">
+        <p>Comparte información útil como recomendaciones de servicios o avisos comunales.</p>
+      </div>
+      <div class="col-md-4">
+        <p>Siente la tranquilidad de saber que tienes alguien cerca para lo que se ofrezca en casa.</p>
+      </div>
+    </div>
+  </section>
 
   <!-- Optional JavaScript -->
   <!-- jQuery first, then Popper.js, then Bootstrap JS -->
