@@ -14,7 +14,7 @@
   <!-- Font Awesome -->
   <script src="https://kit.fontawesome.com/88f405fd13.js" crossorigin="anonymous"></script>
   <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap" rel="stylesheet">
   <!-- Custom CSS -->
   <link rel="stylesheet" href="css/styles.css">
   <!-- Segment -->
@@ -62,33 +62,49 @@
   <!-- Introduction Section -->
   <section id="introduction">
     <div class="container-fluid">
-      <!-- Navbar -->
+      <!-- Navigation Bar -->
       <nav class="navbar navbar-dark">
         <a class="navbar-brand mx-auto" href="#">pininos</a>
       </nav>
 
       <!-- Title + Form -->
       <div class="row">
-        <div class="col-md-6">
+        <div class="col-lg-6">
           <h1>La red social privada para ti y tu hogar</h1>
         </div>
-        <div class="col-md-6">
-          <form>
+        <div class="col-lg-6">
+          <form id="myForm">
             <p>Introduce tu información y te avisaremos en cuanto esté listo el producto.</p>
             <div class="form-group">
               <label for="name">Nombre</label>
-              <input type="text" class="form-control" id="name">
+              <input type="text" name="name" class="form-control" id="name">
             </div>
             <div class="form-group">
               <label for="email">Correo electrónico</label>
-              <input type="email" class="form-control" id="email">
+              <input type="email" name="email" class="form-control" id="email">
             </div>
             <div class="form-group">
               <label for="city">Ciudad</label>
-              <input type="text" class="form-control" id="city">
+              <input type="text" name="city" class="form-control" id="city">
             </div>
-            <button type="submit" class="btn btn-primary btn-lg btn-block">Conoce más</button>
+            <button type="submit" class="btn btn-primary btn-lg btn-block" id="form-submit">Enviar</button>
           </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Description Section -->
+  <section id="description">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-lg-6">
+          <p class="subtitle">Pininos es la mejor manera de estar al tanto de lo que pasa en tu colonia.</p>
+          <p>Ya sea para encontrar..., organizar la próxima reunión de vecinos o avisar de una oleada de robo de carros, hay muchas formas en las que nuestros vecinos pueden ayudarnos. pininos es una manera más sencilla de estar en contacto con
+            ellos.</p>
+        </div>
+        <div class="col-lg-6">
+
         </div>
       </div>
     </div>
@@ -97,21 +113,47 @@
   <!-- Features Section -->
   <section id="features">
     <div class="row">
-      <div class="col-md-4">
-        <p>Comunícate fácilmente con tus vecinos y entérate de lo que pasa en tu colonia.</p>
+
+      <div class="feature-box col-lg-4">
+        <i class="icon fas fa-check-circle fa-4x"></i>
+        <h3>Útil</h3>
+        <p>La forma más fácil de estar al tanto de lo que pasa en tu colonia.</p>
       </div>
-      <div class="col-md-4">
-        <p>Comparte información útil como recomendaciones de servicios o avisos comunales.</p>
+
+      <div class="feature-box col-lg-4">
+        <i class="icon fas fa-lock fa-4x"></i>
+        <h3>Seguro</h3>
+        <p>Un espacio privado diseñado sólo para ti y tus vecinos.</p>
       </div>
-      <div class="col-md-4">
+
+      <div class="feature-box col-lg-4">
+        <i class="icon fas fa-hands-helping fa-4x"></i>
+        <h3>De eficacia probada</h3>
         <p>Siente la tranquilidad de saber que tienes alguien cerca para lo que se ofrezca en casa.</p>
       </div>
+
     </div>
+
   </section>
 
   <!-- Optional JavaScript -->
   <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+  <script>
+    // POST form data to zapier on submit
+    $('#myForm').submit(function(e) {
+      e.preventDefault();
+      $.ajax({
+        url: 'https://hooks.zapier.com/hooks/catch/4287716/o6z42fc/',
+        type: 'post',
+        data: $('#myForm').serialize(),
+        success: function() {
+          // Redirect to same page
+          window.location = "#";
+        }
+      });
+    });
+  </script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 </body>

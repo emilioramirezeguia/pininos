@@ -1,3 +1,32 @@
+/* Global */
+
+body {
+  font-family: 'Roboto', sans-serif;
+}
+
+.container-fluid {
+  padding: 3% 15%;
+}
+
+/* Introduction Section */
+
+#introduction {
+  background-color: #4baf4f;
+}
+
+/** Navigation Bar **/
+
+.navbar {
+  padding-bottom: 4.5rem;
+}
+
+.navbar-brand {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+/** Title + Form **/
+
 form {
   background-color: #ffffff;
   border-radius: 5px;
@@ -12,16 +41,42 @@ form p {
 
 h1 {
   color: #ffffff;
-  font-family: 'Roboto', sans-serif;
-  font-size: 3rem;
+  font-size: 3.5rem;
   font-weight: bold;
   line-height: 1.5;
 }
 
-.container-fluid {
-  padding: 3% 15%;
+/* Description Section */
+
+#description {
+  color: #727781;
 }
 
-#introduction {
+.subtitle {
+  font-size: 1.5rem;
+  font-weight: bolder;
+  line-height: 2;
+}
+
+/* Features Section */
+
+#features {
   background-color: #4baf4f;
+  color: #ffffff;
+  padding: 7% 15%;
+}
+
+.feature-box {
+  padding: 5%;
+  text-align: center;
+}
+
+h3 {
+  font-family: 'Roboto';
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.icon {
+  margin-bottom: 1.5rem;
 }
