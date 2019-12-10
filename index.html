@@ -73,21 +73,24 @@
           <h1>La red social privada para ti y tu hogar</h1>
         </div>
         <div class="col-lg-6">
-          <form id="myForm">
+          <form method="post" id="myForm">
             <p>Introduce tu información y te avisaremos en cuanto esté listo el producto.</p>
             <div class="form-group">
               <label for="name">Nombre</label>
-              <input type="text" name="name" class="form-control" id="name">
+              <input type="text" name="name" class="form-control" id="name" required>
             </div>
             <div class="form-group">
               <label for="email">Correo electrónico</label>
-              <input type="email" name="email" class="form-control" id="email">
+              <input type="email" name="email" class="form-control" id="email" required>
             </div>
             <div class="form-group">
               <label for="city">Ciudad</label>
-              <input type="text" name="city" class="form-control" id="city">
+              <input type="text" name="city" class="form-control" id="city" required>
             </div>
             <button type="submit" class="btn btn-primary btn-lg btn-block" id="form-submit">Enviar</button>
+            <div id="success-message" style="display:none;">
+              <p>¡Gracias! Nos comunicaremos contigo pronto.</p>
+            </div>
           </form>
         </div>
       </div>
@@ -139,8 +142,12 @@
   <!-- Optional JavaScript -->
   <!-- jQuery first, then Popper.js, then Bootstrap JS -->
   <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.1/jquery.validate.min.js"></script>
   <script>
-    // POST form data to zapier on submit
+  $("#myForm").validate();
+  </script>
+  <script>
+    // POST form data to Zapier on submit
     $('#myForm').submit(function(e) {
       e.preventDefault();
       $.ajax({
@@ -148,8 +155,8 @@
         type: 'post',
         data: $('#myForm').serialize(),
         success: function() {
-          // Redirect to same page
-          window.location = "#";
+          $('#myForm')[0].reset();
+          $('#success-message').fadeIn().delay(5000).fadeOut('slow');
         }
       });
     });
