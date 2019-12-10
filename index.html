@@ -91,6 +91,9 @@
             <div id="success-message" style="display:none;">
               <p>¡Gracias! Nos comunicaremos contigo pronto.</p>
             </div>
+            <div id="error-message" style="display:none;">
+              <p>Faltan datos por llenar.</p>
+            </div>
           </form>
         </div>
       </div>
@@ -150,6 +153,14 @@
     // POST form data to Zapier on submit
     $('#myForm').submit(function(e) {
       e.preventDefault();
+      
+      // Validation for empty fields
+      let valid = $.isEmptyObject($("#myForm").validate().invalid);
+      if (!valid) {
+      	$('#error-message').fadeIn().delay(5000).fadeOut('slow');
+      	return;
+      }
+
       $.ajax({
         url: 'https://hooks.zapier.com/hooks/catch/4287716/o6z42fc/',
         type: 'post',
