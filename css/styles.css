@@ -11,7 +11,14 @@ body {
 /* Introduction Section */
 
 #introduction {
-  background-color: #4baf4f;
+  background: linear-gradient(
+    rgba(0, 0, 0, 0.35),
+    rgba(0, 0, 0, 0.35)
+    ), url(../images/calle-levo-rosarito.jpg);
+  background-size: cover;
+}
+
+#success-message, #error-message {
 }
 
 /** Navigation Bar **/
@@ -46,16 +53,26 @@ h1 {
   line-height: 1.5;
 }
 
+.btn-primary {
+  background-color: #4baf4f;
+}
+
 /* Description Section */
 
 #description {
   color: #727781;
+  /* padding: 3.5% 0; */
 }
 
 .subtitle {
   font-size: 1.5rem;
-  font-weight: bolder;
-  line-height: 2;
+  line-height: 1.5;
+
+}
+
+.neighbors {
+  width: 100%;
+  height: auto;
 }
 
 /* Features Section */
@@ -79,4 +96,12 @@ h3 {
 
 .icon {
   margin-bottom: 1.5rem;
+}
+
+/* Footer Section */
+
+#footer {
+  color: #727781;
+  padding-top: 1%;
+  text-align: center;
 }
